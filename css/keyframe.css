@@ -35,6 +35,8 @@
 }
 #banner img{
     max-width: 100%;
+    opacity: 0;
+    overflow: hidden;
 }
 /* 이미지 자기 사이즈 넘기면 커지지 않겠다 */
 .container{
@@ -77,4 +79,22 @@
     /* transform: scale(0.8) translateY(-50%); */
     height: 25%;
     width: 25%;
+}
+.hp{
+    animation-name: up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* 반복하지 말고 마지막 프레임에서 멈춰달라 */
+}
+
+@keyframes up {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0)
+    }
+    
 }
