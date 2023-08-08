@@ -1,0 +1,80 @@
+:root{
+    --bgcolor : #9326ea;
+    --content : 1280px;
+}
+
+.abs{
+    position: absolute;
+}
+.rel{
+    position: relative;
+}
+.fix{
+    position: fixed;
+}
+
+.d-flex{ display: flex;}
+/* 내자신이 아니라 내 아가들이 */
+.jcc{ justify-content: center;}
+.jcb{ justify-content: space-between;}
+/* 첫째와 막내를 균등하게 나눠줌 */
+.aic{ align-items: center;}
+
+.flex-column{ flex-direction: column;}
+
+.d-block{ display: block;}
+/* 양쪽 가득 나타나겠다 */
+.d-none{ display: none;}
+
+/* ------공통클래스------- */
+
+/* layout */
+#banner{
+    height: 650px;
+    background-color: var(--bgcolor);
+}
+#banner img{
+    max-width: 100%;
+}
+/* 이미지 자기 사이즈 넘기면 커지지 않겠다 */
+.container{
+    width: var(--content);
+    margin: 0 auto;
+    height: 100%;
+}
+.left, .right{
+    width: 50%;
+    padding: 0 20px;
+}
+/* 반반 나눠먹겠다 */
+.left .plain{
+    left: -155px;
+    top: 56%;
+    width:38%;
+    z-index: 100;
+
+}
+.left .text01{
+    left: -105px;
+    top: 23%;
+
+}
+.left .text02{
+
+}
+
+.right{
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: end;
+    /* 아래쪽에 맞추겠다 */
+}
+.right .abs{
+    left: -5%;
+    right: -15%;
+}
+.right .abs img:nth-child(1){
+    /* transform: scale(0.8) translateY(-50%); */
+    height: 25%;
+    width: 25%;
+}
